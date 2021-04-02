@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
-export class Setting extends Component {
-    render() {
-        return (
-            <View>
-                <Text>Parent Profile</Text>
-            </View>
-        )
-    }
+class componentName extends Component {
+  render() {
+    return (
+      <View>
+        <Text> Parent Profile </Text>
+        <Text> Term & Conditions </Text>
+        <Text> Contact & FAQs </Text>
+      </View>
+    )
+  }
 }
 
-export default Setting
+export default componentName
