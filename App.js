@@ -11,6 +11,7 @@ import Details from './src/screen/Details';
 import Profile from './src/screen/Profile';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainTab from './src/screen/MainTab';
+import Drawer from './src/screen/Drawer';
 
 function SplashScreen({navigation}) {
   setTimeout(() => {
@@ -42,7 +43,7 @@ const App = () => {
 
         <Stack.Screen
           name="Home"
-          component={MainTab}
+          component={Drawer}
           options={({navigation}) => ({
             title: 'Home',
             // headerShown:false,
