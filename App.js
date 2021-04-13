@@ -12,27 +12,28 @@ import Profile from './src/screen/Profile/Profile';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainTab from './src/screen/BottomTab/MainTab';
 import Drawer from './src/screen/Drawer/Drawer';
+import SplashScreen from './src/screen/SplashScreen/SplashScreen';
 
-function SplashScreen({navigation}) {
-  setTimeout(() => {
-    navigation.navigate('Login');
-  }, 4000);
-  return (
-    <View>
-      <Image
-        source={require('./src/assets/2cd67234938099.56e31c3bdc480.gif')}
-        style={{height: 740, width: '100%'}}
-      />
-    </View>
-  );
-}
+// function SplashScreen({navigation}) {
+//   setTimeout(() => {
+//     navigation.navigate('Login');
+//   }, 4000);
+//   return (
+//     <View>
+//       <Image
+//         source={require('./src/assets/2cd67234938099.56e31c3bdc480.gif')}
+//         style={{height: 740, width: '100%'}}
+//       />
+//     </View>
+//   );
+// }
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer >
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator>
         <Stack.Screen name="Splash_Screen" component={SplashScreen} />
         <Stack.Screen
           name="Login"
@@ -43,7 +44,7 @@ const App = () => {
 
         <Stack.Screen
           name="Home"
-          component={MainTab}
+          component={Drawer}
           options={({navigation}) => ({
             title: 'Home',
             // headerShown:false,
