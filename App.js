@@ -1,17 +1,17 @@
 import React from 'react';
 import {View, Image,TouchableOpacity} from 'react-native';
-import Login from './src/screen/Login';
-import Home from './src/screen/Home';
-import SignUp from './src/screen/SignUp';
+import Login from './src/screen/Login/Login';
+import Home from './src/screen/Home/Home';
+import SignUp from './src/screen/SignUp/SignUp';
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Auth from './src/Authentication/Auth';
-import Details from './src/screen/Details';
-import Profile from './src/screen/Profile';
+import Details from './src/screen/Details/Details';
+import Profile from './src/screen/Profile/Profile';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import MainTab from './src/screen/MainTab';
-import Drawer from './src/screen/Drawer';
+import MainTab from './src/screen/BottomTab/MainTab';
+import Drawer from './src/screen/Drawer/Drawer';
 
 function SplashScreen({navigation}) {
   setTimeout(() => {
@@ -31,7 +31,7 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer >
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Splash_Screen" component={SplashScreen} />
         <Stack.Screen
@@ -43,7 +43,7 @@ const App = () => {
 
         <Stack.Screen
           name="Home"
-          component={Drawer}
+          component={MainTab}
           options={({navigation}) => ({
             title: 'Home',
             // headerShown:false,

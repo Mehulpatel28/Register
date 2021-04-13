@@ -1,8 +1,8 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Home from './Home';
-import Setting from './Setting';    
+import Home from '../Home/Home';
+import Setting from '../Setting/Setting';    
 
 
 

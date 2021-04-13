@@ -12,8 +12,9 @@ import {
   ImageBackground,
   AsyncStorage
 } from 'react-native';
-import InputText from '../Components/InputText';
-import Pickr from '../Components/Picker';
+import InputText from '../../Components/InputText';
+import Pickr from '../../Components/Picker';
+import styles from './Styles'
 
 class SignUp extends Component {
   constructor(props) {
@@ -85,13 +86,13 @@ class SignUp extends Component {
           enabled={Platform.OS === 'ios' ? true : false}
           style={{flex: 1}}>
           <ImageBackground
-              source={require('../assets/bgp.jpg')}
+              source={require('../../assets/bgp.jpg')}
               style={{height:1000}}>
              <Animatable.View animation="fadeInUp" iterationDelay={500}>
             <View style={styles.container}>
               <Image
                 style={styles.img}
-                source={require('../assets/signup.jpg')}
+                source={require('../../assets/signup.jpg')}
               />
               <View>
                 <InputText
@@ -328,40 +329,6 @@ class SignUp extends Component {
   };
 }
 
-const styles = StyleSheet.create({
-  // container: {
-  //   justifyContent: 'center',
-  //   marginTop: 5
-  // },
-  img: {
-    alignItems: 'center',
-    marginLeft: 140,
-    marginTop: 30,
-  },
-  btn1: {
-    marginTop: 10,
-    height: 50,
-    marginLeft: 20,
-    width: 230,
-    backgroundColor: '#009933',
-    borderRadius: 25,
-    alignSelf: 'center',
-  },
-  txt: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    color: 'white',
-    fontSize: 25,
-    fontWeight: 'bold',
-    marginTop: 5,
-  },
-  txt1:{
-    justifyContent: 'center',
-    alignSelf: 'center',
-    fontSize: 17,
-    marginTop: 35,
-    color: '#000'
-  }
-});
+
 
 export default SignUp;

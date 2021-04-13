@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity,ImageBackground} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import InputText from '../Components/InputText';
+import InputText from '../../Components/InputText';
 import * as Animatable from 'react-native-animatable';
+import styles from './Styles'
 
 class Profile extends Component {
 
@@ -38,12 +39,12 @@ class Profile extends Component {
   render() {
     return (
       <ImageBackground
-      source={require('../assets/bgp.jpg')}
+      source={require('../../assets/bgp.jpg')}
       style={{height:1000}}>
      <Animatable.View animation="zoomIn" iterationDelay={500}>
         <View style={styles.container}>
           <View style={styles.centerValues}>
-            <Image source={require('../assets/user.jpg')} style={{ height: 150, width: 150, marginBottom:20 }} />
+            <Image source={require('../../assets/user.jpg')} style={{ height: 150, width: 150, marginBottom:20 }} />
           </View>
         <View  style={styles.form}>
             <InputText iconname="person"
@@ -73,29 +74,3 @@ class Profile extends Component {
 
 export default Profile;
 
-const styles = StyleSheet.create({
-
-  container: {
-    marginVertical: 60,
-  },
-  centerValues: {
-    alignItems: 'center',
-
-  },
-  btn1: {
-    height: 50,
-    width: 150,
-    backgroundColor: '#000',
-    borderRadius: 25,
-    marginTop:12,
-    alignSelf: 'center'
-  },
-  txt: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    color: 'white',
-    fontSize: 25,
-    fontWeight: 'bold',
-    marginTop: 5,
-  }
-});

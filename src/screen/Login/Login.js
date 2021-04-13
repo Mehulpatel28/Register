@@ -10,7 +10,8 @@ import {
   KeyboardAvoidingView,
   ImageBackground
 } from 'react-native';
-import InputText from '../Components/InputText';
+import InputText from '../../Components/InputText';
+import styles from './Styles'
 
 
 
@@ -64,11 +65,11 @@ export default class Login extends Component {
       style={styles.container}
     >
     <ImageBackground
-              source={require('../assets/bgp.jpg')}
+            source={require('../../assets/bgp.jpg')}
               style={{height:1000,marginTop:-100}}>
          <Animatable.View animation="fadeInUp" iterationDelay={500}>
         <View style={styles.container}>
-          <Image style={styles.img} source={require('../assets/Login.png')} />
+          <Image style={styles.img} source={require('../../assets/Login.png')} />
           <View>
             <InputText placeholder="Email" iconname="email"
             onChangeText={(value) => { this.validate(value) }} value={this.state.email} 
@@ -123,41 +124,5 @@ export default class Login extends Component {
 
 }
 
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop:100
-  },
-  img: {
-    alignItems: 'center',
-    marginBottom: 25,
-    marginLeft:143,
-    marginTop:25,
-  },
-  btn1: {
-    marginTop: 35,
-    height: 50,
-    width: 220,
-    marginLeft:10,
-    backgroundColor: '#009933',
-    borderRadius: 25,
-    alignSelf: 'center',
-  },
-  txt: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    color: 'white',
-    fontSize: 25,
-    fontWeight: 'bold',
-    marginTop: 5,
-  },
-  txt1:{
-    justifyContent: 'center',
-    alignSelf: 'center',
-    marginTop: 50,
-    fontSize: 17,
-    color: '#000'
-  }
-});
 
 

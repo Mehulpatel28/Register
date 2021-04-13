@@ -1,8 +1,8 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import Home from "./Home";
-import Profile from "./Profile";
-import Setting from "./Setting"
+import Home from "../Home/Home";
+import Profile from "../Profile/Profile";
+import Setting from "../Setting/Setting"
 
 //import { ContactStackNavigator } from "./StackNavigator";
 //import TabNavigator from "./TabNavigator";

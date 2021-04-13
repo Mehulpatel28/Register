@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SafeAreaView, FlatList, StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 import Right from 'react-native-vector-icons/dist/MaterialIcons';
+import styles from './Styles'
 
 
 export default class Home extends React.Component {
@@ -41,7 +42,8 @@ export default class Home extends React.Component {
                     <Text style={styles.item}>{item.email}</Text>
                   </View>
                   <TouchableOpacity
-                    onPress={() => navigation.navigate('Details', item)}>
+
+                    onPress={()=> this.props.navigation.navigate('Details', item)}>
 
                     <Right
                       name="keyboard-arrow-right"
@@ -62,40 +64,3 @@ export default class Home extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    marginHorizontal: 20,
-  },
-  img: {
-    height: 80,
-    width: 80,
-    marginTop: 9,
-    marginLeft:15,
-    borderRadius: 30,
-    resizeMode: 'contain',
-  },
-  listItem: {
-    height: 100,
-    flex: 1,
-    marginVertical: 10,
-    backgroundColor: '#50d093',
-    flexDirection: 'row',
-  },
-  item: {
-    color: 'white',
-    fontSize: 20,
-  },
-  email: {
-    color: 'white',
-
-    fontSize: 20,
-  },
-  text: {
-    flex: 1,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    marginLeft: 20,
-    marginTop:30
-  },
-
-});

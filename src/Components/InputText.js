@@ -39,7 +39,7 @@ const InputText = (props) => {
     margin:10 ,
     width: 340,
     borderRadius : 20,
-    marginLeft:50,
+    marginLeft:40,
     backgroundColor :'#fff',
   },
   iconStyle:{ 

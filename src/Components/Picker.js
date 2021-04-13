@@ -4,15 +4,13 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const CountryPicker = (props) => {
   const [selectedValue, setSelectedValue] = useState("java");
-  const {pickr} = styles;
-
 
   return (
     <View style={styles.container}>
       <Icon name={props.icon} color="#000" style={styles.ic}> </Icon>
       <Picker
         selectedValue={selectedValue}
-        style={pickr}
+        style={styles.pickr}
         onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
       >
         <Picker.Item label="Select country"  />
@@ -31,7 +29,7 @@ const styles = StyleSheet.create({
     margin:10 ,
     width: 340,
     borderRadius : 20,
-    marginLeft:50,
+    marginLeft:40,
     backgroundColor :'#fff',
     marginBottom:25
   },
